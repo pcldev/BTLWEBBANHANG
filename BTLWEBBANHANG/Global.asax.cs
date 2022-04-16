@@ -13,6 +13,7 @@ namespace BTLWEBBANHANG
         protected void Application_Start(object sender, EventArgs e)
         {
             // Update12
+            // coupe de fondre
         }
 
         protected void Session_Start(object sender, EventArgs e)
