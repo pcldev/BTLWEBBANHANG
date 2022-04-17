@@ -12,17 +12,7 @@ namespace BTLWEBBANHANG
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            //hkjjh
-            //ádasdaghsdvb
-            //vgfcvf
-            //ádda
-            //ádasdấd
-            //bhbhb
-            //fcfcfffhgcghffgh
-            //yau
-            //sdfsdffsd
-            // /vgvgvhvh
-            //New cmt
+            
         }
 
         protected void Session_Start(object sender, EventArgs e)
