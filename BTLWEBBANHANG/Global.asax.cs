@@ -12,15 +12,19 @@ namespace BTLWEBBANHANG
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            //abc
-            //la đã đến
-            //1
-            //234
-            //fbdsghkdeghwioerth
+            //mmmmmmmmm
+            //long
+            //Lan Anh
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
+            List<Product> products = new List<Product>();
+            List<User> users = new List<User>();
+            products.Add(new Product(1, "Item 1", "This is the description of item 1", 1000));
+            Session["products"] = products;
+            Application["users"] = users;
+            //ad123
 
         }
 
