@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace BTLWEBBANHANG.internal class
+namespace BTLWEBBANHANG
 {
 
-    public class user
+    public class User
     {
         private string gmail;
         private string password;
         private string rePassword;
 
-        public user() { }
-
-        public user(string gmail , string password, string rePassword)
+        public User(string gmail , string password, string rePassword)
         {
             this.gmail = gmail;
             this.password = password;
