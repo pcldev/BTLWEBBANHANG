@@ -67,12 +67,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="asset\css\cart.css" />
+    <Content Include="asset\image\img_1.jpg" />
+    <Content Include="asset\image\img_2.jpg" />
+    <Content Include="asset\js\giohang.js" />
+    <Content Include="giohang.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="img_1.jpg" />
     <Content Include="trangchu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="giohang.aspx.cs">
+      <DependentUpon>giohang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="giohang.aspx.designer.cs">
+      <DependentUpon>giohang.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -96,11 +107,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="assets\css\" />
-    <Folder Include="assets\image\" />
-    <Folder Include="assets\js\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
