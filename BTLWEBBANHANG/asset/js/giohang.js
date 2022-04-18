@@ -1,7 +1,7 @@
 ﻿const cartContainer = document.querySelector(".cart__items");
 
 cartContainer.innerHTML = cartItemHTML;
-onUpdatePrice();
+
 console.log("Long");
 function onIncrementHandler(id) {
   const itemQuantity = document.querySelector(`.itemQuantity_${id}`);
@@ -46,3 +46,5 @@ function onUpdateTotalPrice() {
           <p>Total: ${totalPrice * wrappers.length}đ</p>
           <button class="btn-main">Proceed to checkout</button>`;
 }
+
+onUpdateTotalPrice();
