@@ -26,11 +26,14 @@ namespace BTLWEBBANHANG
                             "<div class='cart__items-content'>" +
                                 "<h3>" + cartItems[i].Name + "</h3>" +
                                 "<span>Quantity: </span>" +
-                                "<button class='pd-1' onclick='onDecrementHandler(" + cartItems[i].Id + ")'>-</button>" +
-                                "<span class='itemQuantity_"+ cartItems[i].Id + "'>" + 0 + "</span>" +
-                                "<button class='pd-1' onclick='onIncrementHandler(" + cartItems[i].Id + ")'>+</button>" +
-                                "<button class='pd-1''>Delete</button>" +
-                                "<p class='price_"+cartItems[i].Id + "' data-price='"+ cartItems[i].Price + "'>Price: " + cartItems[i].Price + "đ</p>" +
+                                "<button class='smallest-btn-pd btn-change-item ' onclick='onDecrementHandler(" + cartItems[i].Id + ")'><img src='./asset/items/btnMinus.png' alt='-'></button>" +
+                                "<span class='itemQuantity pd-1 itemQuantity_"+ cartItems[i].Id + "'>" + 1 + "</span>" +
+                                "<button class='smallest-btn-pd btn-change-item ' onclick='onIncrementHandler(" + cartItems[i].Id + ")'><img src='./asset/items/btnplus.png' alt='+'></button>" +
+                                "<button class='small-btn-pd btn-change-item '><img src='./asset/items/btnDeleteItem.png' alt='Delete'></button>" +
+                                "<br>"+
+                                "<span>Price: </span>"+
+                                "<span class='price price_"+cartItems[i].Id + "' data-price='"+ cartItems[i].Price + "'>" + cartItems[i].Price + "</span>" +
+                                "<span>đ</span>"+
                             "</div>" +
                         "</div>";
 

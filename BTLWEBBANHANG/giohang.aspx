@@ -18,56 +18,67 @@ Inherits="BTLWEBBANHANG.giohang" %>
     <div class="container">
       <h1>Your Cart</h1>
       <div class="cart__content">
-        <div class="cart__items">
-          <!-- <div class="wrapper">
-            <div class="cart__items-image">
-              <img src="./image/image_1.png" alt="" />
-            </div>
-            <div class="cart__items-content">
-              <h3>GIÀY BÓNG ĐÁ SÂN CỎ TỰ NHIÊN KHÔNG DÂY X SPEEDFLOW.3</h3>
-              <span>Size : 39</span>
-              <p>Color: Core Black/Sonic Ink / Solar Yellow</p>
-              <span>Quantity: </span>
-              <button class="pd-1">-</button>
-              <span>1</span>
-              <button class="pd-1">+</button>
-              <button class="pd-1">Delete</button>
-              <p>Price: 4.800.000đ</p>
-            </div>
-          </div>
-          <div class="wrapper">
-            <div class="cart__items-image">
-              <img src="./image/image_1.png" alt="" />
-            </div>
-            <div class="cart__items-content">
-              <h3>GIÀY BÓNG ĐÁ SÂN CỎ TỰ NHIÊN KHÔNG DÂY X SPEEDFLOW.3</h3>
-              <span>Size : 39</span>
-              <p>Color: Core Black/Sonic Ink / Solar Yellow</p>
-              <span>Quantity: </span>
-              <button class="pd-1">-</button>
-              <span>1</span>
-              <button class="pd-1">+</button>
-              <button class="pd-1">Delete</button>
-              <p>Price: 4.800.000đ</p>
-            </div>
-          </div> -->
-        </div>
-        <div class="cart__recap">
-          <!--<h2>Recap</h2>
-          <p>3 prodcuts: 7.200.000đ</p>
-          <p>Shipping: Freeship</p>
-          <p>Total: 7.200.000đ</p>
-          <button class="btn-main">Proceed to checkout</button>-->
-        </div>
+        <div class="cart__items"></div>
+        <div class="cart__recap"></div>
       </div>
     </div>
     <script>
       const cartItemHTML = "<%= Session["renCartItems"]%>"
+
+      const cartContainer = document.querySelector(".cart__items");
+
+      cartContainer.innerHTML = cartItemHTML;
+      onUpdateTotalPrice();
+      function onIncrementHandler(id) {
+          const itemQuantity = document.querySelector(`.itemQuantity_${id}`);
+
+          const itemPrice = document.querySelector(`.price_${id}`);
+          if (+itemQuantity.innerHTML === 11) {
+              return;
+          } else {
+              //window.location.pathname="/IncrementCartItem.aspx"
+              itemQuantity.innerHTML = +itemQuantity.innerHTML + 1;
+              itemPrice.innerHTML = +itemQuantity.innerHTML * itemPrice.dataset.price ;
+              onUpdateTotalPrice();
+          }
+      }
+      function onDecrementHandler(id) {
+          const itemQuantity = document.querySelector(`.itemQuantity_${id}`);
+
+          const itemPrice = document.querySelector(`.price_${id}`);
+          if (+itemQuantity.innerHTML === 0) {
+              return;
+          } else {
+              itemQuantity.innerHTML = +itemQuantity.innerHTML - 1;
+              itemPrice.innerHTML = +itemQuantity.innerHTML * itemPrice.dataset.price ;
+              onUpdateTotalPrice();
+          }
+      }
+      function onUpdateTotalPrice() {
+          const itemQuantities = document.querySelectorAll(`.itemQuantity`);
+          const cartrecap = document.querySelector(".cart__recap");
+          const wrappers = document.querySelectorAll(".wrapper");
+          const arrItems = document.querySelectorAll(".price");
+
+          const arrPrices = [];
+          arrItems.forEach((item) => {
+              arrPrices.push(+item.innerHTML);
+          });
+
+          const arrQuantites = []
+          itemQuantities.forEach((quantity)=>{
+            arrQuantites.push(+quantity.innerHTML)
+          })
+          const totalPrice = arrPrices.reduce((pre, next) => pre + next, 0);
+
+          const totalQuantity = arrQuantites.reduce((pre,next)=> pre + next , 0)
+
+          cartrecap.innerHTML = `<h2>Recap</h2>
+        <p>${totalQuantity} products: ${totalPrice}đ</p>
+        <p>Shipping: Freeship</p>
+        <p>Total: ${totalPrice}đ</p>
+        <button class="btn-main big-btn-pd">Proceed to checkout</button>`;
+      }
     </script>
-    <script
-      src="./asset/js/giohang.js"
-      language="javascript"
-      type="text/javascript"
-    ></script>
   </body>
 </html>

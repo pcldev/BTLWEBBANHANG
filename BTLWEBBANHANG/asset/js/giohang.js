@@ -2,11 +2,10 @@
 
 cartContainer.innerHTML = cartItemHTML;
 
-console.log("Long");
 function onIncrementHandler(id) {
   const itemQuantity = document.querySelector(`.itemQuantity_${id}`);
 
-  const itemPrice = document.querySelector(`.price_${id})`);
+  const itemPrice = document.querySelector(`.price_${id}`);
   if (+itemQuantity.innerHTML === 11) {
     return;
   } else {

@@ -25,6 +25,7 @@ namespace BTLWEBBANHANG
             List<Product> products = new List<Product>();
             List<User> users = new List<User>();
             products.Add(new Product(1, "Item 1", "This is the description of item 1","./asset/image/img_1.jpg", 1000));
+            products.Add(new Product(2, "Item 2", "This is the description of item 2","./asset/image/img_2.jpg", 3000));
             Session["products"] = products;
             Application["users"] = users;
             //ad123

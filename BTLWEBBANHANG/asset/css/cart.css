@@ -6,7 +6,6 @@
 }
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -25,12 +24,32 @@ button {
 .pd-1 {
   padding: 1rem;
 }
-.btn-main {
+
+.big-btn-pd {
   padding: 20px 60px;
+}
+
+.small-btn-pd {
+  padding: 10px 30px;
+}
+
+.smallest-btn-pd {
+  padding: 10px 15px;
+}
+
+.btn-main {
   background-color: var(--primary-color);
   border: none;
   border-radius: 50px;
+  font-weight: bolder;
 }
+
+.btn-change-item {
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+}
+
 .container {
   max-width: 1660px;
   margin: auto;
@@ -42,10 +61,34 @@ button {
 }
 
 .container .cart__content .cart__items .wrapper {
+  margin-top: 32px;
   max-width: 60%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px;
 }
+
+.container .cart__content .cart__items .wrapper .cart__items-image {
+  width: 35%;
+}
+
+.container .cart__content .cart__items .wrapper .cart__items-image img {
+  width: 100%;
+}
+
+.container .cart__content .cart__items .wrapper .cart__items-content {
+}
+
+.container
+  .cart__content
+  .cart__items
+  .wrapper
+  .cart__items-content
+  .itemQuantity {
+}
+
 .container .cart__content .cart__recap > * {
   margin-top: 2rem;
 }
