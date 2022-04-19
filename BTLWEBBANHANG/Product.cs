@@ -11,14 +11,16 @@ namespace BTLWEBBANHANG
         private string name;
         private string description;
         private string image;
+        private string type;
         private long price;
 
-        public Product(int id , string name, string description ,string image ,long price )
+        public Product(int id , string name, string description ,string image ,string type,long price )
         {
             this.id = id;
             this.name = name;
             this.description = description;
-            this.Image = image;
+            this.image = image;
+            this.Type = type;
             this.price = price;
         }
 
@@ -26,6 +28,7 @@ namespace BTLWEBBANHANG
         public string Name { get => name; set => name = value; }
         public string Description { get => description; set => description = value; }
         public string Image { get => image; set => image = value; }
+        public string Type { get => type; set => type = value; }
         public long Price { get => price; set => price = value; }
     }
 }
