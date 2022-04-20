@@ -59,6 +59,7 @@
                         <br />
                         <button class="btn-Logup">Đăng xuất</button>--%>
                    </div>
+                    
                 </div>
                 <i class="fas fa-shopping-bag" onclick="cartClick();"></i>
                 <p id="numberItems" class="number-items" runat="server"></p>

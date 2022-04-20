@@ -19,6 +19,7 @@ namespace BTLWEBBANHANG
             List<Products> arrLiked = new List<Products>();
             Application.Add("arrLiked", arrLiked);
             //Top
+            //thu
             arrProduct.Add(new Products() { id = "1", img = "asset/image/home/nam.jpg", name = "QUẦN DÀI NAM", price = "99.000", newprice = "150.000", detail = "Thun Cá sấu Indo cao cấp, Mịn mát.", type = "top" });
             arrProduct.Add(new Products() { id = "2", img = "asset/image/home/nam3.jpg", name = "QUẦN THỂ THAO NAM", price = "99.000", newprice = "150.000", detail = "Thun Cá sấu Indo cao cấp, Mịn mát.", type = "top" });
             arrProduct.Add(new Products() { id = "3", img = "asset/image/home/nu1.jpg", name = "VÁY TRẮNG CÔNG CHÚA", price = "99.000", newprice = "150.000", detail = "Thun Cá sấu Indo cao cấp, Mịn mát.", type = "top" });
