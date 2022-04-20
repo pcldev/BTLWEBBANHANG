@@ -68,8 +68,40 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="asset\css\cart.css" />
+    <Content Include="asset\css\home.css" />
+    <Content Include="asset\icon\all.css" />
+    <Content Include="asset\image\home\2380496801_143247485.400x400.jpg" />
+    <Content Include="asset\image\home\banner-dam-1536x568.png" />
+    <Content Include="asset\image\home\istockphoto-1146961321-1024x1024.jpg" />
+    <Content Include="asset\image\home\Legacies_Slider_Sale.png" />
+    <Content Include="asset\image\home\nam.JPG" />
+    <Content Include="asset\image\home\nam1.JPG" />
+    <Content Include="asset\image\home\nam2.JPG" />
+    <Content Include="asset\image\home\nam3.JPG" />
+    <Content Include="asset\image\home\nam4.JPG" />
+    <Content Include="asset\image\home\nam5.JPG" />
+    <Content Include="asset\image\home\nam6.JPG" />
+    <Content Include="asset\image\home\nam7.JPG" />
+    <Content Include="asset\image\home\nam8.JPG" />
+    <Content Include="asset\image\home\nam9.JPG" />
+    <Content Include="asset\image\home\nu1.JPG" />
+    <Content Include="asset\image\home\nu10.JPG" />
+    <Content Include="asset\image\home\nu11.JPG" />
+    <Content Include="asset\image\home\nu12.JPG" />
+    <Content Include="asset\image\home\nu13.JPG" />
+    <Content Include="asset\image\home\nu2.JPG" />
+    <Content Include="asset\image\home\nu3.JPG" />
+    <Content Include="asset\image\home\nu4.JPG" />
+    <Content Include="asset\image\home\nu5.JPG" />
+    <Content Include="asset\image\home\nu6.JPG" />
+    <Content Include="asset\image\home\nu7.JPG" />
+    <Content Include="asset\image\home\nu8.JPG" />
+    <Content Include="asset\image\home\nu9.JPG" />
+    <Content Include="asset\image\home\th.jpg" />
+    <Content Include="asset\image\home\thoi-trang-nam-elle-man.png" />
     <Content Include="asset\image\img_1.jpg" />
     <Content Include="asset\image\img_2.jpg" />
+    <Content Include="asset\image\home\logo-thoi-trang%281%29.jpg" />
     <Content Include="asset\items\btnDeleteItem.png" />
     <Content Include="asset\items\btnMinus.png" />
     <Content Include="asset\items\btnplus.png" />
@@ -90,6 +122,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Products.cs" />
     <Compile Include="trangchu.aspx.cs">
       <DependentUpon>trangchu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
