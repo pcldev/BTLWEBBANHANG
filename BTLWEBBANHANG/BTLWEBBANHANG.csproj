@@ -76,6 +76,8 @@
     <Content Include="asset\image\home\Legacies_Slider_Sale.png" />
     <Content Include="asset\image\home\nam.JPG" />
     <Content Include="asset\image\home\nam1.JPG" />
+    <Content Include="asset\image\home\nam10.jpg" />
+    <Content Include="asset\image\home\nam12.jpg" />
     <Content Include="asset\image\home\nam2.JPG" />
     <Content Include="asset\image\home\nam3.JPG" />
     <Content Include="asset\image\home\nam4.JPG" />
@@ -97,6 +99,9 @@
     <Content Include="asset\image\home\nu7.JPG" />
     <Content Include="asset\image\home\nu8.JPG" />
     <Content Include="asset\image\home\nu9.JPG" />
+    <Content Include="asset\image\home\pk1.jpg" />
+    <Content Include="asset\image\home\pk2.jpg" />
+    <Content Include="asset\image\home\pk3.jpg" />
     <Content Include="asset\image\home\th.jpg" />
     <Content Include="asset\image\home\thoi-trang-nam-elle-man.png" />
     <Content Include="asset\image\img_1.jpg" />
