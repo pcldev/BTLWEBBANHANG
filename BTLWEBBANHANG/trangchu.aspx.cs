@@ -24,7 +24,7 @@ namespace BTLWEBBANHANG
                 sHTML += "<span class='list-banchay-giamoi'>"+ products[i].NewPrice + "</span>";
                 sHTML += "<i class='far fa-heart'></i>";
                 sHTML += "</div>";
-                sHTML += "<button class='btn-them' onclick='themgiohang("+ products[i].Id + ",'" + products[i].Name + "','" + products[i].Description + "','" + products[i].Image + "','" + products[i].Type + "'," + products[i].Price + ");' >Thêm vào giỏ hàng</button>";
+                sHTML += "<button class='btn-them' data-id=" + products[i].Id + " data-name=" + products[i].Name + "  data-description=" + products[i].Id + "  data-id=" + products[i].Description + "  data-image=" + products[i].Image + " data-type=" + products[i].Type + "  data-price=" + products[i].Price + "  data-newPrice=" + products[i].NewPrice + "   onclick='themgiohang(this);' >Thêm vào giỏ hàng</button>";
                 sHTML += "</div>";
             }
 

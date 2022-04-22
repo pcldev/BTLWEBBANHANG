@@ -381,29 +381,33 @@ Inherits="BTLWEBBANHANG.trangchu" %>
       topbanchay.innerHTML = cartItemHTML;
 
       //Xu ly them vao gio hang
-      function themgiohang(id, name, description, image, type, price) {
-        //   let listCart = []
-        //   listCart = JSON.parse(localStorage.getItem("cart"))
-        //   if (listCart) {
-        //       listCart.push({
-        //           id: id,
-        //           name: name,
-        //           description: description,
-        //           image: image,
-        //           type: type,
-        //           price: price,
-        //       })
-        //   } else {
-        //       localStorage.setItem("cart", JSON.stringify([{
-        //           id: id,
-        //           name: name,
-        //           description: description,
-        //           image: image,
-        //           type: type,
-        //           price: price,
-        //       }]));
-        //   }
-        console.log("LONG")
+      function themgiohang(thisBTN) {
+           let listCart = []
+           listCart = JSON.parse(localStorage.getItem("cart"))
+          if (listCart) {
+               console.log('Exist')
+               listCart.push({
+                   id: +thisBTN.dataset.id,
+                   name: thisBTN.dataset.name,
+                   description: thisBTN.dataset.description,
+                   image: thisBTN.dataset.image,
+                   type: thisBTN.dataset.type,
+                   price: +thisBTN.dataset.price,
+               })
+              // Dấu + ở đằng trước là một cách để ép nó về kiểu number
+              localStorage.setItem("cart", JSON.stringify(listCart))
+          } else {
+              console.log(' No Exist')
+               localStorage.setItem("cart", JSON.stringify([{
+                   id: +thisBTN.dataset.id,
+                   name: thisBTN.dataset.name,
+                   description: thisBTN.dataset.description,
+                   image: thisBTN.dataset.image,
+                   type: thisBTN.dataset.type,
+                   price: +thisBTN.dataset.price,
+               }]));
+             }
+          
       };
     </script>
   </body>
