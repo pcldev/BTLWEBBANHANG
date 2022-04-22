@@ -23,25 +23,26 @@ Inherits="BTLWEBBANHANG.giohang" %>
       </div>
     </div>
     <script>
-      // localStorage.setItem("cart",JSON.stringify([
-      //   {
-      //     id:1,
-      //     name:"Item 1",
-      //     description: "This is the description of item 1",
-      //     image:"./asset/image/img_1.jpg",
-      //     type:"nam",
-      //     price:1000
-      //   },
-      //  {
-      //     id:2,
-      //     name:"Item 2",
-      //     description: "This is the description of item 2",
-      //     image:"./asset/image/img_2.jpg",
-      //     type:"nu",
-      //     price:3000
-      //   }
-      // ]))
-       
+        
+       //localStorage.setItem("cart",JSON.stringify([
+       //  {
+       //    id:1,
+       //    name:"Item 1",
+       //    description: "This is the description of item 1",
+       //    image:"./asset/image/img_1.jpg",
+       //    type:"nam",
+       //    price:1000
+       //  },
+       // {
+       //    id:2,
+       //    name:"Item 2",
+       //    description: "This is the description of item 2",
+       //    image:"./asset/image/img_2.jpg",
+       //    type:"nu",
+       //    price:3000
+       //  }
+       //]))
+
         const listCartItems = JSON.parse(localStorage.getItem("cart"));
         if (listCartItems) {
             let sHtml = "";
