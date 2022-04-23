@@ -34,12 +34,18 @@ namespace BTLWEBBANHANG
             
 
             List<Product> products = new List<Product>();
-            products.Add(new Product(1, "QUẦN DÀI NAM" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam3.jpg","nam",12000,10000));
-            products.Add(new Product(2, "QUẦN DÀI NAM" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam3.jpg","nam",12000,10000));
-            products.Add(new Product(3, "QUẦN DÀI NAM" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam3.jpg","nam",12000,10000));
-            products.Add(new Product(4, "QUẦN DÀI NAM" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam3.jpg","nam",12000,10000));
-            products.Add(new Product(5, "QUẦN DÀI NAM" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam3.jpg","nam",12000,10000));
-            products.Add(new Product(6, "QUẦN DÀI NAM" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam3.jpg","nam",12000,10000));
+            products.Add(new Product(1, "QUẦN DÀI NAM" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam3.jpg","nam",120000,10000));
+            products.Add(new Product(2, "BỘ QUẦN ÁO NAM " , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam1.jpg","nam",100000,90000));
+            products.Add(new Product(3, "ÁO PHÔNG GIẤY MÁT" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nu2.jpg","nam",150000,99000));
+            products.Add(new Product(4, "ÁO PHÔNG CUTE" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nu9.JPG", "nam",80000,50000));
+            products.Add(new Product(5, "TÚI XÁCH ĐẸP" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nu13.jpg","nam",300000,250000));
+            products.Add(new Product(6, "ÁO CROTOP CHO NỮ" , "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nu6.jpg","nam",12000,10000));
+            products.Add(new Product(7, "TÚI XÁCH TRẮNG", "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nu12.jpg", "nam", 260000, 230000));
+            products.Add(new Product(8, "ÁO PHÔNG FREESIZE", "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nu7.jpg", "nam", 12000, 99000));
+            products.Add(new Product(9, "ĐỒNG HỒ NAM", "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam6.jpg", "nam", 600000, 590000));
+            products.Add(new Product(10, "KÍNH MẮT NAM NỮ", "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam8.jpg", "nam", 12000, 10000));
+            products.Add(new Product(11, "KẸP TÓC HÀN QUỐC", "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nu11.jpg", "nam", 60000, 55000));
+            products.Add(new Product(11, "SƠ MI ĐẸP", "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nu3.jpg", "nam", 180000, 150000));
             Application["listProducts"] = products;
         }
 

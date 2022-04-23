@@ -45,18 +45,13 @@ Inherits="BTLWEBBANHANG.trangchu" %>
         <div class="search_box">
           <div class="search_form">
             <input
-              type="text"
-              class="input_search"
-              name=""
-              id=""
-              placeholder="Search..."
-            />
+              type="text" class="input_search" name="" id="" placeholder="Search..."/>
             <button class="btn_search"><i class="fas fa-search"></i></button>
           </div>
         </div>
         <div class="list-icon">
           <i class="far fa-heart" aria-hidden="true"></i>
-          <i class="far fa-user" onclick="AccountClick()"></i>
+          <i class="far fa-user" ></i>
           <div id="accounts" class="accounts">
             <div id="f1" runat="server">
               <%-- <a id="tt-login" href="Account.aspx?method=0">Đăng nhập</a>
@@ -122,134 +117,7 @@ Inherits="BTLWEBBANHANG.trangchu" %>
       </div>
       <div class="list-banchay">
         <div class="list-banchay-img" id="topbanchay" runat="server">
-          <%--
-          <div class="all">
-            <img src="asset/image/home/nam1.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">ÁO NGẮN TAY</p>
-              <span class="list-banchay-gia"><strike>200.000</strike></span>
-              <span class="list-banchay-giamoi">150.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them" id="themgiohang">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nam2.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">BỘ ĐỒ NAM</p>
-              <span class="list-banchay-gia"><strike>350.000</strike></span>
-              <span class="list-banchay-giamoi">2500.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them" id="themgiohang1">
-              Thêm vào giỏ hàng
-            </button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nu1.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">VÁY XINH</p>
-              <span class="list-banchay-gia"><strike>200.000</strike></span>
-              <span class="list-banchay-giamoi">100.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them" id="themgiohang2">
-              Thêm vào giỏ hàng
-            </button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nu11.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">KẸP TÓC HÀN QUỐC</p>
-              <span class="list-banchay-gia"><strike>30.000</strike></span>
-              <span class="list-banchay-giamoi">10.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them" id="themgiohang3">
-              Thêm vào giỏ hàng
-            </button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nu12.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">TÚI XÁCH TRẮNG XINH</p>
-              <span class="list-banchay-gia"><strike>200.000</strike></span>
-              <span class="list-banchay-giamoi">99.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nu9.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">ÁO PHÔNG CUTE</p>
-              <span class="list-banchay-gia"><strike>150.000</strike></span>
-              <span class="list-banchay-giamoi">99.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nu3.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">ÁO SƠ MI ĐẸP</p>
-              <span class="list-banchay-gia"><strike>200.000</strike></span>
-              <span class="list-banchay-giamoi">150.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nu13.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">TÚI XÁCH ĐẸP</p>
-              <span class="list-banchay-gia"><strike>400.000</strike></span>
-              <span class="list-banchay-giamoi">380.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nam6.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">ĐỒNG HỒ SANG TRỌNG</p>
-              <span class="list-banchay-gia"><strike>800.000</strike></span>
-              <span class="list-banchay-giamoi">750.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nu10.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">BÔNG TAI XỎ MẠ BẠC</p>
-              <span class="list-banchay-gia"><strike>13.000</strike></span>
-              <span class="list-banchay-giamoi">7.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nam7.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">KẸP CAVAT NAM</p>
-              <span class="list-banchay-gia"><strike>198.000</strike></span>
-              <span class="list-banchay-giamoi">170.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them">Thêm vào giỏ hàng</button>
-          </div>
-          <div class="all">
-            <img src="asset/image/home/nam4.JPG" class="img" />
-            <div class="list-banchay-text">
-              <p class="tensp">QUẦN VẢI VETTION</p>
-              <span class="list-banchay-gia"><strike>140.000</strike></span>
-              <span class="list-banchay-giamoi">99.000</span>
-              <i class="far fa-heart"></i>
-            </div>
-            <button class="btn-them">Thêm vào giỏ hàng</button>
-          </div>
-          --%>
+          
         </div>
       </div>
     </div>
@@ -381,7 +249,8 @@ Inherits="BTLWEBBANHANG.trangchu" %>
       topbanchay.innerHTML = cartItemHTML;
 
       //Xu ly them vao gio hang
-      function themgiohang(thisBTN) {
+        function themgiohang(thisBTN) {
+            alert("oke");
            let listCart = []
            listCart = JSON.parse(localStorage.getItem("cart"))
           if (listCart) {
