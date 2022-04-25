@@ -5,8 +5,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <title></title>
-    <link href="~/Assets/Css/Account.css" type="text/css" rel="stylesheet" runat="server"/>
-    <link href="~/Assets/Icon/css/all.min.css" type="text/css" rel="stylesheet"/>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <script language="javascript">
 
