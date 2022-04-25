@@ -17,7 +17,8 @@ namespace BTLWEBBANHANG
             for(int i = 0; i < products.Count; i++)
             {
                 sHTML += "<div class='all'>";
-                sHTML += "<img src='" + products[i].Image + "' class='img'/> ";
+                sHTML += " <a href ='TrangConChiTiet.aspx?id="+products[i].Id  +"'>";
+                sHTML += "<img src='" + products[i].Image + "' class='img'/> </a> ";
                 sHTML += "<div class='list-banchay-text'>";
                 sHTML += "<p class='tensp'>"+ products[i].Name + "</p>";
                 sHTML += "<span class='list-banchay-gia'><strike>"+ products[i].Price + "</strike></span>";

@@ -1,0 +1,70 @@
+:root {
+    --primary-color: rgba(252, 172, 40, 1);
+    --secondarybg-color: white;
+    --secondary-color: black;
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+
+  }
+button {
+    cursor: pointer;
+  }
+  .btn{
+      display: block;
+      width: 100%;
+  }
+  .mt-1 {
+      margin-top: 1rem;
+  }
+  .mt-2 {
+    margin-top: 2rem;
+  }
+  .pd-1 {
+    padding: 1rem;
+  }
+  
+  .big-btn-pd {
+    padding: 20px 60px;
+  }
+  
+  .small-btn-pd {
+    padding: 10px 30px;
+  }
+  
+  .smallest-btn-pd {
+    padding: 10px 15px;
+  }
+
+  .btn-main {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 50px;
+    font-weight: bolder;
+  }
+  .btn-second {
+    background-color: var(--secondarybg-color);
+    border: 1px solid black;
+    border-radius: 50px;
+    font-weight: bolder;
+  }
+  .btn-change-item {
+    border: none;
+    background-color: transparent;
+    vertical-align: middle;
+  }
+
+  .main-content{
+      width: 1260px;
+      display: flex;
+      margin: 0 auto;
+  }
+  .main-content .img-block img{
+    width: 85%;
+    padding: 20px;
+  }
