@@ -11,10 +11,97 @@ Inherits="BTLWEBBANHANG.giohang" %>
       media="screen"
       href="./asset/css/cart.css"
     />
-
+    <link href="asset/css/home.css" rel="stylesheet" type="text/css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <title>Your cart</title>
   </head>
   <body>
+    <div class="header">
+      <div class="header-logo">
+        <img src="asset/image/home/logo-thoi-trang(1).jpg" />
+      </div>
+      <div class="headerMid-menu-left">
+        <ul class="headerMid-menu-left_list">
+          <li class="headerMid-menu-left_list_items">
+            <a href="trangchu.aspx">Trang chủ</a>
+          </li>
+          <li class="headerMid-menu-left_list_items">
+            <p>Thời trang nam</p>
+          </li>
+          <li class="headerMid-menu-left_list_items">
+            <p>Thời trang nữ</p>
+          </li>
+          <li class="headerMid-menu-left_list_items">
+            <p>Phụ kiện</p>
+          </li>
+          <li class="headerMid-menu-left_list_items">
+            <p>Tin tức</p>
+          </li>
+          <li class="headerMid-menu-left_list_items">
+            <p>Giới thiệu</p>
+          </li>
+        </ul>
+      </div>
+      <div class="headerMid-menu-right">
+        <div class="search_box">
+          <div class="search_form">
+            <input
+              type="text"
+              class="input_search"
+              name=""
+              id=""
+              placeholder="Search..."
+            />
+            <button class="btn_search"><i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div class="list-icon">
+          <i class="far fa-heart" aria-hidden="true"></i>
+          <i class="far fa-user"></i>
+          <!-- <div id="accounts" class="accounts">
+            <div id="f1" runat="server">
+              <%-- <a id="tt-login" href="Account.aspx?method=0">Đăng nhập</a>
+              <br />
+              <a id="tt-signup" href="Account.aspx?method=1">Đăng kí</a>--%>
+            </div>
+            <div id="f2" runat="server">
+              <%-- Tài khoản:
+              <a id="accLogin" href="Account.aspx?method=0" runat="server"
+                >abc</a
+              >
+              <br />
+              <button class="btn-Logup">Đăng xuất</button>--%>
+            </div>
+          </div> -->
+          <a href="giohang.aspx"><i class="fas fa-shopping-bag"></i></a>
+          <p id="numberItems" class="number-items" runat="server"></p>
+          <div class="cart" id="cart-home">
+            <%--
+            <h5>Sản phẩm đã chọn</h5>
+            --%>
+            <div id="cartlistItems" runat="server"></div>
+            <div
+              class="cart-container-button"
+              id="cartIconButton"
+              runat="server"
+            >
+              <div id="allMoney" runat="server"></div>
+              <%--<button
+                id="btnPay"
+                onclick="document.location.href='Cart.aspx';"
+                runat="server"
+              >
+                Thanh Toán</button
+              >--%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <h1>Your Cart</h1>
       <div class="cart__content">
@@ -23,74 +110,73 @@ Inherits="BTLWEBBANHANG.giohang" %>
       </div>
     </div>
     <script>
-        
-       //localStorage.setItem("cart",JSON.stringify([
-       //  {
-       //    id:1,
-       //    name:"Item 1",
-       //    description: "This is the description of item 1",
-       //    image:"./asset/image/img_1.jpg",
-       //    type:"nam",
-       //    price:1000
-       //  },
-       // {
-       //    id:2,
-       //    name:"Item 2",
-       //    description: "This is the description of item 2",
-       //    image:"./asset/image/img_2.jpg",
-       //    type:"nu",
-       //    price:3000
-       //  }
-       //]))
+      //localStorage.setItem("cart",JSON.stringify([
+      //  {
+      //    id:1,
+      //    name:"Item 1",
+      //    description: "This is the description of item 1",
+      //    image:"./asset/image/img_1.jpg",
+      //    type:"nam",
+      //    price:1000
+      //  },
+      // {
+      //    id:2,
+      //    name:"Item 2",
+      //    description: "This is the description of item 2",
+      //    image:"./asset/image/img_2.jpg",
+      //    type:"nu",
+      //    price:3000
+      //  }
+      //]))
 
-        const listCartItems = JSON.parse(localStorage.getItem("cart"));
-        if (listCartItems) {
-            let sHtml = "";
-            for (var i = 0; i < listCartItems.length; i++) {
-                sHtml +=
-                    "<div class='wrapper'>" +
-                    "<div class='cart__items-image'>" +
-                    "<img src = '" +
-                    listCartItems[i].image +
-                    "'/>" +
-                    "</div>" +
-                    "<div class='cart__items-content'>" +
-                    "<h3>" +
-                    listCartItems[i].name +
-                    "</h3>" +
-                    "<span>Quantity: </span>" +
-                    "<button class='smallest-btn-pd btn-change-item ' onclick='onDecrementHandler(" +
-                    listCartItems[i].id +
-                    ")'><img src='./asset/items/btnMinus.png' alt='-'></button>" +
-                    "<span class='itemQuantity pd-1 itemQuantity_" +
-                    listCartItems[i].id +
-                    "'>" +
-                    1 +
-                    "</span>" +
-                    "<button class='smallest-btn-pd btn-change-item ' onclick='onIncrementHandler(" +
-                    listCartItems[i].id +
-                    ")'><img src='./asset/items/btnplus.png' alt='+'></button>" +
-                    "<button class='small-btn-pd btn-change-item '><img src='./asset/items/btnDeleteItem.png' alt='Delete'></button>" +
-                    "<br>" +
-                    "<span>Price: </span>" +
-                    "<span class='price price_" +
-                    listCartItems[i].id +
-                    "' data-price='" +
-                    listCartItems[i].price +
-                    "'>" +
-                    listCartItems[i].price +
-                    "</span>" +
-                    "<span>đ</span>" +
-                    "</div>" +
-                    "</div>";
-            }
-            //const cartItemHTML = "<%= Session["renCartItems"]%>"
-
-            const cartContainer = document.querySelector(".cart__items");
-
-            cartContainer.innerHTML = sHtml;
+      const listCartItems = JSON.parse(localStorage.getItem("cart"));
+      if (listCartItems) {
+        let sHtml = "";
+        for (var i = 0; i < listCartItems.length; i++) {
+          sHtml +=
+            "<div class='wrapper'>" +
+            "<div class='cart__items-image'>" +
+            "<img src = '" +
+            listCartItems[i].image +
+            "'/>" +
+            "</div>" +
+            "<div class='cart__items-content'>" +
+            "<h3>" +
+            listCartItems[i].name +
+            "</h3>" +
+            "<span>Quantity: </span>" +
+            "<button class='smallest-btn-pd btn-change-item ' onclick='onDecrementHandler(" +
+            listCartItems[i].id +
+            ")'><img src='./asset/items/btnMinus.png' alt='-'></button>" +
+            "<span class='itemQuantity pd-1 itemQuantity_" +
+            listCartItems[i].id +
+            "'>" +
+            1 +
+            "</span>" +
+            "<button class='smallest-btn-pd btn-change-item ' onclick='onIncrementHandler(" +
+            listCartItems[i].id +
+            ")'><img src='./asset/items/btnplus.png' alt='+'></button>" +
+            "<button class='small-btn-pd btn-change-item '><img src='./asset/items/btnDeleteItem.png' alt='Delete'></button>" +
+            "<br>" +
+            "<span>Price: </span>" +
+            "<span class='price price_" +
+            listCartItems[i].id +
+            "' data-price='" +
+            listCartItems[i].price +
+            "'>" +
+            listCartItems[i].price +
+            "</span>" +
+            "<span>đ</span>" +
+            "</div>" +
+            "</div>";
         }
-      
+        //const cartItemHTML = "<%= Session["renCartItems"]%>"
+
+        const cartContainer = document.querySelector(".cart__items");
+
+        cartContainer.innerHTML = sHtml;
+      }
+
       onUpdateTotalPrice();
       function onIncrementHandler(id) {
         const itemQuantity = document.querySelector(`.itemQuantity_${id}`);
@@ -110,7 +196,7 @@ Inherits="BTLWEBBANHANG.giohang" %>
         const itemQuantity = document.querySelector(`.itemQuantity_${id}`);
 
         const itemPrice = document.querySelector(`.price_${id}`);
-        if (+itemQuantity.innerHTML === 0) {
+        if (+itemQuantity.innerHTML === 1) {
           return;
         } else {
           itemQuantity.innerHTML = +itemQuantity.innerHTML - 1;

@@ -67,7 +67,7 @@ Inherits="BTLWEBBANHANG.trangchu" %>
               <button class="btn-Logup">Đăng xuất</button>--%>
             </div>
           </div>
-          <i class="fas fa-shopping-bag" onclick="cartClick();"></i>
+          <a href="giohang.aspx"><i class="fas fa-shopping-bag" "></i></a>
           <p id="numberItems" class="number-items" runat="server"></p>
           <div class="cart" id="cart-home">
             <%--
