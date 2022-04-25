@@ -5,13 +5,14 @@ Inherits="BTLWEBBANHANG.giohang" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head runat="server">
+    <link href="asset/css/home.css" rel="stylesheet" type="text/css" />
     <link
       rel="stylesheet"
       runat="server"
       media="screen"
       href="./asset/css/cart.css"
     />
-    <link href="asset/css/home.css" rel="stylesheet" type="text/css" />
+
     <link
       type="text/css"
       rel="stylesheet"
@@ -27,7 +28,7 @@ Inherits="BTLWEBBANHANG.giohang" %>
       <div class="headerMid-menu-left">
         <ul class="headerMid-menu-left_list">
           <li class="headerMid-menu-left_list_items">
-            <a href="trangchu.aspx">Trang chủ</a>
+            <a href="trangchu.aspx"><p>Trang chủ</p></a>
           </li>
           <li class="headerMid-menu-left_list_items">
             <p>Thời trang nam</p>
@@ -107,6 +108,34 @@ Inherits="BTLWEBBANHANG.giohang" %>
       <div class="cart__content">
         <div class="cart__items"></div>
         <div class="cart__recap"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-left">
+        <p class="text-col">THƯƠNG HIỆU THỜI TRANG ALTV</p>
+        <p class="conten-col">Hotline: 0943380376</p>
+        <p class="conten-col">Email: ALTV@gmail.com</p>
+        <p class="conten-col">Địa chỉ</p>
+        <p class="conten-col">CN1: 90 Định Công, Hoàng Mai, Hà Nội</p>
+        <p class="conten-col">CN2: 151 Nguyễn Hiền, Hai Bà Trưng, Hà Nội</p>
+      </div>
+      <div class="footer-between">
+        <P class="text-col">VỀ CHÚNG TÔI</P>
+        <p class="conten-col">Giới thiệu</p>
+        <p class="conten-col">Liên hệ</p>
+        <p class="conten-col">Tuyển dụng</p>
+        <p class="conten-col">Tin tức ALTV</p>
+      </div>
+      <div class="footer-right">
+        <p class="text-col">KẾT NỐI VỚI ALTV</p>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-skype"></i>
+        <i class="fab fa-instagram"></i>
+        <p class="conten-col">Đăng kí nhận tin</p>
+        <input id="txtEmails" type="text" placeholder="Email của bạn" />
+        <button id="btnDks">Đăng kí</button>
       </div>
     </div>
     <script>

@@ -9,8 +9,7 @@
   box-sizing: border-box;
 }
 
-body,
-p {
+body {
   margin: 0;
   padding: 0;
 }
