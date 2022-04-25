@@ -117,7 +117,7 @@ Inherits="BTLWEBBANHANG.trangchu" %>
       </div>
       <div class="list-banchay">
         <div class="list-banchay-img" id="topbanchay" runat="server">
-          
+
         </div>
       </div>
     </div>
@@ -262,6 +262,7 @@ Inherits="BTLWEBBANHANG.trangchu" %>
                    image: thisBTN.dataset.image,
                    type: thisBTN.dataset.type,
                    price: +thisBTN.dataset.price,
+                   quantity:1
                })
               // Dấu + ở đằng trước là một cách để ép nó về kiểu number
               localStorage.setItem("cart", JSON.stringify(listCart))
@@ -274,9 +275,10 @@ Inherits="BTLWEBBANHANG.trangchu" %>
                    image: thisBTN.dataset.image,
                    type: thisBTN.dataset.type,
                    price: +thisBTN.dataset.price,
+                   quantity:1
                }]));
              }
-          
+
       };
     </script>
   </body>

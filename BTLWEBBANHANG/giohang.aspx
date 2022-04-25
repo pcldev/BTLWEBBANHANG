@@ -158,54 +158,7 @@ Inherits="BTLWEBBANHANG.giohang" %>
       //  }
       //]))
 
-      const listCartItems = JSON.parse(localStorage.getItem("cart"));
-      if (listCartItems) {
-        let sHtml = "";
-        for (var i = 0; i < listCartItems.length; i++) {
-          sHtml +=
-            "<div class='wrapper'>" +
-            "<div class='cart__items-image'>" +
-            "<img src = '" +
-            listCartItems[i].image +
-            "'/>" +
-            "</div>" +
-            "<div class='cart__items-content'>" +
-            "<h3>" +
-            listCartItems[i].name +
-            "</h3>" +
-            "<span>Quantity: </span>" +
-            "<button class='smallest-btn-pd btn-change-item ' onclick='onDecrementHandler(" +
-            listCartItems[i].id +
-            ")'><img src='./asset/items/btnMinus.png' alt='-'></button>" +
-            "<span class='itemQuantity pd-1 itemQuantity_" +
-            listCartItems[i].id +
-            "'>" +
-            1 +
-            "</span>" +
-            "<button class='smallest-btn-pd btn-change-item ' onclick='onIncrementHandler(" +
-            listCartItems[i].id +
-            ")'><img src='./asset/items/btnplus.png' alt='+'></button>" +
-            "<button class='small-btn-pd btn-change-item '><img src='./asset/items/btnDeleteItem.png' alt='Delete'></button>" +
-            "<br>" +
-            "<span>Price: </span>" +
-            "<span class='price price_" +
-            listCartItems[i].id +
-            "' data-price='" +
-            listCartItems[i].price +
-            "'>" +
-            listCartItems[i].price +
-            "</span>" +
-            "<span>đ</span>" +
-            "</div>" +
-            "</div>";
-        }
-        //const cartItemHTML = "<%= Session["renCartItems"]%>"
-
-        const cartContainer = document.querySelector(".cart__items");
-
-        cartContainer.innerHTML = sHtml;
-      }
-
+      capNhatDOM();
       onUpdateTotalPrice();
       function onIncrementHandler(id) {
         const itemQuantity = document.querySelector(`.itemQuantity_${id}`);
@@ -219,6 +172,7 @@ Inherits="BTLWEBBANHANG.giohang" %>
           itemPrice.innerHTML =
             +itemQuantity.innerHTML * itemPrice.dataset.price;
           onUpdateTotalPrice();
+          capNhatSoLuongMoiSP(id, +itemQuantity.innerHTML);
         }
       }
       function onDecrementHandler(id) {
@@ -232,6 +186,7 @@ Inherits="BTLWEBBANHANG.giohang" %>
           itemPrice.innerHTML =
             +itemQuantity.innerHTML * itemPrice.dataset.price;
           onUpdateTotalPrice();
+          capNhatSoLuongMoiSP(id, +itemQuantity.innerHTML);
         }
       }
       function onUpdateTotalPrice() {
@@ -258,6 +213,76 @@ Inherits="BTLWEBBANHANG.giohang" %>
          <p>Shipping: Freeship</p>
          <p>Total: ${totalPrice}đ</p>
          <button class="btn-main big-btn-pd">Proceed to checkout</button>`;
+      }
+      function onDeleteCartItem(id) {
+        const listCartItems = JSON.parse(localStorage.getItem("cart"));
+        const filterItem = listCartItems.filter((item) => item.id !== id);
+        localStorage.setItem("cart", JSON.stringify(filterItem));
+        capNhatDOM();
+        onUpdateTotalPrice();
+      }
+
+      function capNhatDOM() {
+        const listCartItems = JSON.parse(localStorage.getItem("cart"));
+        if (listCartItems) {
+          let sHtml = "";
+          for (var i = 0; i < listCartItems.length; i++) {
+            sHtml +=
+              "<div class='wrapper'>" +
+              "<div class='cart__items-image'>" +
+              "<img src = '" +
+              listCartItems[i].image +
+              "'/>" +
+              "</div>" +
+              "<div class='cart__items-content'>" +
+              "<h3>" +
+              listCartItems[i].name +
+              "</h3>" +
+              "<span>Quantity: </span>" +
+              "<button class='smallest-btn-pd btn-change-item ' onclick='onDecrementHandler(" +
+              listCartItems[i].id +
+              ")'><img src='./asset/items/btnMinus.png' alt='-'></button>" +
+              "<span class='itemQuantity pd-1 itemQuantity_" +
+              listCartItems[i].id +
+              "'>" +
+              listCartItems[i].quantity +
+              "</span>" +
+              "<button class='smallest-btn-pd btn-change-item ' onclick='onIncrementHandler(" +
+              listCartItems[i].id +
+              ")'><img src='./asset/items/btnplus.png' alt='+'></button>" +
+              "<button class='small-btn-pd btn-change-item ' onclick='onDeleteCartItem(" +
+              listCartItems[i].id +
+              ")'><img src='./asset/items/btnDeleteItem.png' alt='Delete'></button>" +
+              "<br>" +
+              "<span>Price: </span>" +
+              "<span class='price price_" +
+              listCartItems[i].id +
+              "' data-price='" +
+              listCartItems[i].price +
+              "'>" +
+              listCartItems[i].price +
+              "</span>" +
+              "<span>đ</span>" +
+              "</div>" +
+              "</div>";
+          }
+          //const cartItemHTML = "<%= Session["renCartItems"]%>"
+
+          const cartContainer = document.querySelector(".cart__items");
+
+          cartContainer.innerHTML = sHtml;
+        }
+      }
+
+      function capNhatSoLuongMoiSP(id, quantity) {
+        const listCartItems = JSON.parse(localStorage.getItem("cart"));
+        listCartItems.forEach((item) => {
+          if (item.id === id) {
+            item.quantity = quantity;
+          }
+        });
+
+        localStorage.setItem("cart", JSON.stringify(listCartItems));
       }
     </script>
   </body>
