@@ -111,6 +111,8 @@ Inherits="BTLWEBBANHANG.trangchu" %>
       </div>
     </div>
     <div class="topbanchay">
+      <!-- <button onclick="sortPriceIncrement()" >Sắp xếp theo giá tăng dần</button>
+      <button onclick="sortPriceDecrement()">Sắp xếp theo giá giảm dần</button> -->
       <div class="text-top">
         <b> Top Bán Chạy</b>
         <hr />
@@ -158,6 +160,7 @@ Inherits="BTLWEBBANHANG.trangchu" %>
 
       //Xu ly them vao gio hang
         function themgiohang(thisBTN) {
+
             alert("oke");
            let listCart = []
            listCart = JSON.parse(localStorage.getItem("cart"))
@@ -188,6 +191,15 @@ Inherits="BTLWEBBANHANG.trangchu" %>
              }
 
       };
+
+        function sortPriceDecrement(){
+          window.location.href = "trangchu.aspx?sort=0"
+        }
+
+        function sortPriceIncrement(){
+          window.location.href = "trangchu.aspx?sort=1"
+        }
+
     </script>
   </body>
 </html>
