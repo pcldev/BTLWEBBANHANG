@@ -113,7 +113,17 @@ Inherits="BTLWEBBANHANG.trangchu" %>
     <div class="topbanchay">
       <!-- <button onclick="sortPriceIncrement()" >Sắp xếp theo giá tăng dần</button>
       <button onclick="sortPriceDecrement()">Sắp xếp theo giá giảm dần</button> -->
-      <div class="text-top">
+
+        <!-- <label for="">Giá thứ nhất</label>
+        <input type="number" name="giathunhat" id="giathunhat" placeholder="Nhập giá thứ nhất" required="required"/>
+        <br/>
+        <label for="">Giá thứ hai</label>
+        <input type="number" name="giathunhat" id="giathuhai" placeholder="Nhập giá thứ hai" required="required"/>
+
+        <button onclick ="locsanphamtheogia()"  >Tìm</button> -->
+
+
+        <div class="text-top">
         <b> Top Bán Chạy</b>
         <hr />
       </div>
@@ -198,6 +208,21 @@ Inherits="BTLWEBBANHANG.trangchu" %>
 
         function sortPriceIncrement(){
           window.location.href = "trangchu.aspx?sort=1"
+        }
+
+        function locsanphamtheogia(){
+          const giathunhat = document.getElementById("giathunhat")
+          const giathuhai = document.getElementById("giathuhai")
+
+          if(giathunhat.value == '' || giathuhai.value == ''){
+            alert('Vui lòng nhập đầy đủ cả 2 giá tiền')
+          }else if(giathunhat.value > giathuhai.value){
+            alert("Giá thứ hai phải lớn hơn giá thứ nhất")
+          }else{
+            window.location.href = "trangchu.aspx?price1=" + giathunhat.value +"&price2=" + giathuhai.value
+
+          }
+
         }
 
     </script>

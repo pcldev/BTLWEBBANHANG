@@ -12,7 +12,30 @@ namespace BTLWEBBANHANG
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if(Request.QueryString["price1"] != "" && Request.QueryString["price2"] != "" && Request.QueryString["price1"] != null && Request.QueryString["price2"] != null){
+                List<Product> products = (List<Product>)Application["listProducts"];
 
+                string sHTML = "";
+                for(int i = 0; i < products.Count; i++)
+                {
+                    if(products[i].NewPrice <= long.Parse(Request.QueryString["price2"]) && products[i].NewPrice >= long.Parse(Request.QueryString["price1"])){
+                        sHTML += "<div class='all'>";
+                        sHTML += " <a href ='TrangConChiTiet.aspx?id="+products[i].Id  +"'>";
+                        sHTML += "<img src='" + products[i].Image + "' class='img'/> </a> ";
+                        sHTML += "<div class='list-banchay-text'>";
+                        sHTML += "<p class='tensp'>"+ products[i].Name + "</p>";
+                        sHTML += "<span class='list-banchay-gia'><strike>"+ products[i].Price + "</strike></span>";
+                        sHTML += "<span class='list-banchay-giamoi'>"+ products[i].NewPrice + "</span>";
+                        sHTML += "<i class='far fa-heart'></i>";
+                        sHTML += "</div>";
+                        sHTML += "<button class='btn-them' data-id=" + products[i].Id + " data-name='" + products[i].Name + "'  data-description=" + products[i].Id + "  data-id=" + products[i].Description + "  data-image=" + products[i].Image + " data-type=" + products[i].Type + "  data-price=" + products[i].Price + "  data-newPrice=" + products[i].NewPrice + "   onclick='themgiohang(this);' >Thêm vào giỏ hàng</button>";
+                        sHTML += "</div>";
+                    }
+
+                }
+
+                Session["renHomePage"] = sHTML;
+            }else
             if(Request.QueryString["sort"] != null || Request.QueryString["sort"] != ""){
                  List<Product> products = (List<Product>)Application["listProducts"];
                 if(Request.QueryString["sort"] == "1"){
