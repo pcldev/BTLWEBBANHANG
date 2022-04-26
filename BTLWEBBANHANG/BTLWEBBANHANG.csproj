@@ -116,6 +116,7 @@
     <Content Include="Global.asax" />
     <Content Include="trangchu.aspx" />
     <Content Include="TrangConChiTiet.aspx" />
+    <Content Include="useraccount.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +155,13 @@
     <Compile Include="User.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="useraccount.aspx.cs">
+      <DependentUpon>useraccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="useraccount.aspx.designer.cs">
+      <DependentUpon>useraccount.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

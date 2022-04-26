@@ -22,9 +22,9 @@ Inherits="BTLWEBBANHANG.trangchu" %>
       <div class="headerMid-menu-left">
         <ul class="headerMid-menu-left_list">
           <li class="headerMid-menu-left_list_items">
-            <p>Trang chủ</p>
+            <a href="trangchu.aspx"><p>Trang chủ</p></a>
           </li>
-          <li class="headerMid-menu-left_list_items">
+          <!-- <li class="headerMid-menu-left_list_items">
             <p>Thời trang nam</p>
           </li>
           <li class="headerMid-menu-left_list_items">
@@ -38,15 +38,15 @@ Inherits="BTLWEBBANHANG.trangchu" %>
           </li>
           <li class="headerMid-menu-left_list_items">
             <p>Giới thiệu</p>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="headerMid-menu-right">
         <div class="search_box">
           <div class="search_form">
-            <input
+            <!-- <input
               type="text" class="input_search" name="" id="" placeholder="Search..."/>
-            <button class="btn_search"><i class="fas fa-search"></i></button>
+            <button class="btn_search"><i class="fas fa-search"></i></button> -->
           </div>
         </div>
         <div class="list-icon">
@@ -121,99 +121,7 @@ Inherits="BTLWEBBANHANG.trangchu" %>
         </div>
       </div>
     </div>
-    <div class="hangmoive">
-      <div class="conten-next">
-        <p class="hangmoive-text">Hàng mới về</p>
-        <hr />
-      </div>
-      <div class="hangmoive-item">
-        <div class="col1">
-          <p class="col1-text">Thời trang nam</p>
-          <div class="col1-item">
-            <img src="asset/image/home/nam5.JPG" class="col1-img" />
-            <div class="col1-right">
-              <p class="col1-right-text">Quần tây sang trọng</p>
-              <p class="col1-right-gia">300.000</p>
-            </div>
-          </div>
-          <hr />
-          <div class="col1-item">
-            <img src="asset/image/home/nam12.jpg" class="col1-img" />
-            <div class="col1-right">
-              <p class="col1-right-text">Áo phông nam đẹp</p>
-              <p class="col1-right-gia">150.000</p>
-            </div>
-          </div>
-          <hr />
-          <div class="col1-item">
-            <img src="asset/image/home/nam10.jpg" class="col1-img" />
-            <div class="col1-right">
-              <p class="col1-right-text">Bộ quần áo trẻ trung</p>
-              <p class="col1-right-gia">650.000</p>
-            </div>
-          </div>
-          <hr />
-        </div>
-        <div class="col1">
-          <p class="col1-text">Thời trang nữ</p>
-          <div class="col1-item">
-            <img src="asset/image/home/nu2.JPG" class="col1-img" />
-            <div class="col1-right">
-              <p class="col1-right-text">Áo phông giấy nữ mát mẻ</p>
-              <p class="col1-right-gia">80.000</p>
-            </div>
-          </div>
-          <hr />
-          <div class="col1-item">
-            <img src="asset/image/home/nu4.JPG" class="col1-img" />
-            <div class="col1-right">
-              <p class="col1-right-text">Áo phông freesize</p>
-              <p class="col1-right-gia">120.000</p>
-            </div>
-          </div>
-          <hr />
-          <div class="col1-item">
-            <img src="asset/image/home/nu7.JPG" class="col1-img" />
-            <div class="col1-right">
-              <p class="col1-right-text">Áo phông Hàn Quốc</p>
-              <p class="col1-right-gia">150.000</p>
-            </div>
-          </div>
-          <hr />
-        </div>
-        <div class="col1">
-          <p class="col1-text">Phụ kiện nam nữ</p>
 
-          <div class="col1-item">
-            <img src="asset/image/home/pk1.jpg" class="col1-img" />
-            <div class="col1-right">
-              <p class="col1-right-text">Vòng cổ bạc nam</p>
-              <p class="col1-right-gia">210.000</p>
-            </div>
-          </div>
-          <hr />
-          <div class="col1-item">
-            <img src="asset/image/home/pk2.jpg" class="col1-img" />
-            <div class="col1-right">
-              <p class="col1-right-text">Phụ kiện cài áo sang trọng</p>
-              <p class="col1-right-gia">300.000</p>
-            </div>
-          </div>
-          <hr />
-          <div class="col1-item">
-            <img src="asset/image/home/pk3.jpg" class="col1-img" />
-            <div class="col1-right">
-              <p class="col1-right-text">Thắt lưng da cá sấu</p>
-              <p class="col1-right-gia">740.000</p>
-            </div>
-          </div>
-          <hr />
-        </div>
-      </div>
-    </div>
-    <div class="xemthem">
-      <button class="btn-xemthem">Xem Thêm</button>
-    </div>
     <div class="footer">
       <div class="footer-left">
         <p class="text-col">THƯƠNG HIỆU THỜI TRANG ALTV</p>

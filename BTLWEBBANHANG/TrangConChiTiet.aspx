@@ -22,9 +22,9 @@
       <div class="headerMid-menu-left">
         <ul class="headerMid-menu-left_list">
           <li class="headerMid-menu-left_list_items">
-            <a href="trangchu.aspx"><p>Trang chủ</p></a> 
+            <a href="trangchu.aspx"><p>Trang chủ</p></a>
           </li>
-          <li class="headerMid-menu-left_list_items">
+          <!-- <li class="headerMid-menu-left_list_items">
             <p>Thời trang nam</p>
           </li>
           <li class="headerMid-menu-left_list_items">
@@ -38,15 +38,15 @@
           </li>
           <li class="headerMid-menu-left_list_items">
             <p>Giới thiệu</p>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="headerMid-menu-right">
         <div class="search_box">
           <div class="search_form">
-            <input
+            <!-- <input
               type="text" class="input_search" name="" id="" placeholder="Search..."/>
-            <button class="btn_search"><i class="fas fa-search"></i></button>
+            <button class="btn_search"><i class="fas fa-search"></i></button> -->
           </div>
         </div>
         <div class="list-icon">
@@ -67,7 +67,7 @@
               <button class="btn-Logup">Đăng xuất</button>--%>
             </div>
           </div>
-          <i class="fas fa-shopping-bag" onclick="cartClick();"></i>
+          <a href="giohang.aspx"><i class="fas fa-shopping-bag" "></i></a>
           <p id="numberItems" class="number-items" runat="server"></p>
           <div class="cart" id="cart-home">
             <%--
@@ -103,10 +103,10 @@
         <p>Số lượng</p>
 
         <button class='smallest-btn-pd btn-change-item ' onclick='onDecrementHandler()'>
-          <img src='./asset/items/btnMinus.png' alt='-'></button> 
+          <img src='./asset/items/btnMinus.png' alt='-'></button>
                     <span class='itemQuantity pd-1 '>1</span>
                     <button class='smallest-btn-pd btn-change-item ' onclick='onIncrementHandler()'><img src='./asset/items/btnplus.png' alt='+'></button>
-          
+
                     <br>
         <button class="btn btn-second big-btn-pd">Thêm vào giỏ hàng</button>
         <br>

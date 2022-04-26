@@ -30,7 +30,7 @@ Inherits="BTLWEBBANHANG.giohang" %>
           <li class="headerMid-menu-left_list_items">
             <a href="trangchu.aspx"><p>Trang chủ</p></a>
           </li>
-          <li class="headerMid-menu-left_list_items">
+          <!-- <li class="headerMid-menu-left_list_items">
             <p>Thời trang nam</p>
           </li>
           <li class="headerMid-menu-left_list_items">
@@ -44,26 +44,21 @@ Inherits="BTLWEBBANHANG.giohang" %>
           </li>
           <li class="headerMid-menu-left_list_items">
             <p>Giới thiệu</p>
-          </li>
+          </li> -->
         </ul>
       </div>
       <div class="headerMid-menu-right">
         <div class="search_box">
           <div class="search_form">
-            <input
-              type="text"
-              class="input_search"
-              name=""
-              id=""
-              placeholder="Search..."
-            />
-            <button class="btn_search"><i class="fas fa-search"></i></button>
+            <!-- <input
+              type="text" class="input_search" name="" id="" placeholder="Search..."/>
+            <button class="btn_search"><i class="fas fa-search"></i></button> -->
           </div>
         </div>
         <div class="list-icon">
           <i class="far fa-heart" aria-hidden="true"></i>
-          <i class="far fa-user"></i>
-          <!-- <div id="accounts" class="accounts">
+          <i class="far fa-user" ></i>
+          <div id="accounts" class="accounts">
             <div id="f1" runat="server">
               <%-- <a id="tt-login" href="Account.aspx?method=0">Đăng nhập</a>
               <br />
@@ -77,8 +72,8 @@ Inherits="BTLWEBBANHANG.giohang" %>
               <br />
               <button class="btn-Logup">Đăng xuất</button>--%>
             </div>
-          </div> -->
-          <a href="giohang.aspx"><i class="fas fa-shopping-bag"></i></a>
+          </div>
+          <a href="giohang.aspx"><i class="fas fa-shopping-bag" "></i></a>
           <p id="numberItems" class="number-items" runat="server"></p>
           <div class="cart" id="cart-home">
             <%--
