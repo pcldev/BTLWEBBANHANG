@@ -95,21 +95,7 @@ Inherits="BTLWEBBANHANG.trangchu" %>
     <div class="banner">
       <img src="asset/image/home/banner-dam-1536x568.png" />
     </div>
-    <div class="conten">
-      <div class="conten-right">
-        <img src="asset/image/home/istockphoto-1146961321-1024x1024.jpg" />
-      </div>
-      <div class="conten-left">
-        <div class="conten-left-top">
-          <p class="text">Thời trang nữ</p>
-          <img src="asset/image/home/2380496801_143247485.400x400.jpg" />
-        </div>
-        <div class="conten-left-bottom">
-          <p class="text">Thời trang nam</p>
-          <img src="asset/image/home/thoi-trang-nam-elle-man.png" />
-        </div>
-      </div>
-    </div>
+    
     <div class="topbanchay">
       <!-- <button onclick="sortPriceIncrement()" >Sắp xếp theo giá tăng dần</button>
       <button onclick="sortPriceDecrement()">Sắp xếp theo giá giảm dần</button> -->
@@ -124,7 +110,7 @@ Inherits="BTLWEBBANHANG.trangchu" %>
 
 
         <div class="text-top">
-        <b> Top Bán Chạy</b>
+        <b> DANH SÁCH SẢN PHẨM</b>
         <hr />
       </div>
       <div class="list-banchay">
@@ -171,7 +157,7 @@ Inherits="BTLWEBBANHANG.trangchu" %>
       //Xu ly them vao gio hang
         function themgiohang(thisBTN) {
 
-            alert("oke");
+            alert("Thêm thành công");
            let listCart = []
            listCart = JSON.parse(localStorage.getItem("cart"))
           if (listCart) {

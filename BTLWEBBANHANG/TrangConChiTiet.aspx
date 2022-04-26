@@ -93,12 +93,16 @@
       </div>
     </div>
 
+    
     <div class="main-content">
-      <div class="img-block">
+      <%--<div class="img-block">
+          
         <img src="asset/image/home/nam1.JPG" alt="">
       </div>
+
       <div class="product-detail">
-        <h2>Áo nam</h2>
+          
+        <h2>áo nam</h2>
         <p class="price" data-price="50000">500000</p>
         <p>Số lượng</p>
 
@@ -111,8 +115,10 @@
         <button class="btn btn-second big-btn-pd">Thêm vào giỏ hàng</button>
         <br>
         <button class="btn btn-main big-btn-pd mt-1">Mua ngay</button>
-      </div>
+      </div>--%>
+
     </div>
+    
 
     <div class="footer">
       <div class="footer-left">
@@ -172,7 +178,45 @@
           itemPrice.innerHTML =
             +itemQuantity.innerHTML * +itemPrice.dataset.price;
         }
-      }
+        }
+        const thongtinSP = "<%= Session["Hientrangconchitiet"]%>"
+        document.querySelector(".main-content").innerHTML = thongtinSP;
+
+        //thêm giỏ hàng
+        function themgiohang(thisBTN) {
+
+            alert("Thêm thành công");
+            let listCart = []
+            listCart = JSON.parse(localStorage.getItem("cart"))
+            if (listCart) {
+                console.log('Exist')
+                listCart.push({
+                    id: +thisBTN.dataset.id,
+                    name: thisBTN.dataset.name,
+                    description: thisBTN.dataset.description,
+                    image: thisBTN.dataset.image,
+                    type: thisBTN.dataset.type,
+                    price: +thisBTN.dataset.price,
+                    quantity: +document.querySelector(`.itemQuantity`).innerHTML
+
+                })
+                // Dấu + ở đằng trước là một cách để ép nó về kiểu number
+                localStorage.setItem("cart", JSON.stringify(listCart))
+            } else {
+                console.log(' No Exist')
+                localStorage.setItem("cart", JSON.stringify([{
+                    id: +thisBTN.dataset.id,
+                    name: thisBTN.dataset.name,
+                    description: thisBTN.dataset.description,
+                    image: thisBTN.dataset.image,
+                    type: thisBTN.dataset.type,
+                    price: +thisBTN.dataset.price,
+                    quantity: +document.querySelector(`.itemQuantity`).innerHTML
+
+                }]));
+            }
+
+        };
     </script>
 </body>
 </html>

@@ -207,8 +207,15 @@ Inherits="BTLWEBBANHANG.giohang" %>
          <p>${totalQuantity} products: ${totalPrice}đ</p>
          <p>Shipping: Freeship</p>
          <p>Total: ${totalPrice}đ</p>
-         <button class="btn-main big-btn-pd">Proceed to checkout</button>`;
-      }
+         <button class="btn-main big-btn-pd" id="btnMua" onclick="Xoagiohang()">Proceed to checkout</button>`;
+        }
+        function Xoagiohang() {
+            alert("Cảm ơn đã mua hàng");
+            
+            localStorage.removeItem("cart");
+            capNhatDOM();
+            onUpdateTotalPrice();
+        }
       function onDeleteCartItem(id) {
         const listCartItems = JSON.parse(localStorage.getItem("cart"));
         const filterItem = listCartItems.filter((item) => item.id !== id);
@@ -218,9 +225,10 @@ Inherits="BTLWEBBANHANG.giohang" %>
       }
 
       function capNhatDOM() {
-        const listCartItems = JSON.parse(localStorage.getItem("cart"));
-        if (listCartItems) {
+          const listCartItems = JSON.parse(localStorage.getItem("cart"));
           let sHtml = "";
+        if (listCartItems) {
+          
           for (var i = 0; i < listCartItems.length; i++) {
             sHtml +=
               "<div class='wrapper'>" +
@@ -263,10 +271,9 @@ Inherits="BTLWEBBANHANG.giohang" %>
           }
           //const cartItemHTML = "<%= Session["renCartItems"]%>"
 
+          }
           const cartContainer = document.querySelector(".cart__items");
-
           cartContainer.innerHTML = sHtml;
-        }
       }
 
       function capNhatSoLuongMoiSP(id, quantity) {
