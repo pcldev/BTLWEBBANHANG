@@ -45,7 +45,10 @@ namespace BTLWEBBANHANG
             products.Add(new Product(10, "KÍNH MẮT NAM NỮ", "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nam8.jpg", "nam", 12000, 10000));
             products.Add(new Product(11, "KẸP TÓC HÀN QUỐC", "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nu11.jpg", "nam", 60000, 55000));
             products.Add(new Product(12, "SƠ MI ĐẸP", "Thun Cá sấu Indo cao cấp, Mịn mát.", "asset/image/home/nu3.jpg", "nam", 180000, 150000));
+            
+            List<User> users  = new List<User>();
             Application["listProducts"] = products;
+            Application["listUser"] = users;
         }
 
         protected void Session_Start(object sender, EventArgs e)

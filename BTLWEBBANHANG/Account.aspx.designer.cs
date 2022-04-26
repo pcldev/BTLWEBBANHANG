@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BTL
+namespace BTLWEBBANHANG
 {
 
 

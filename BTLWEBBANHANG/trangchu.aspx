@@ -51,7 +51,7 @@ Inherits="BTLWEBBANHANG.trangchu" %>
         </div>
         <div class="list-icon">
           <i class="far fa-heart" aria-hidden="true"></i>
-          <i class="far fa-user" ></i>
+          <a href="useraccount.aspx"><i class="far fa-user" ></i></a>
           <div id="accounts" class="accounts">
             <div id="f1" runat="server">
               <%-- <a id="tt-login" href="Account.aspx?method=0">Đăng nhập</a>
